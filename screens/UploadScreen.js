@@ -215,11 +215,13 @@ export default function UploadScreen() {
     
     return (
         <SafeAreaView style={styles.container}>
-            <TouchableOpacity onPress={this.cameraLaunch} style={styles.button}  >
-              <Text style={styles.buttonText}>Launch Camera Directly</Text>
+            <Text>{"\n"}</Text>
+            <TouchableOpacity onPress={this.cameraLaunch} style={styles.selectButton}  >
+              <Text style={styles.buttonText}>เปิดกล้อง</Text>
             </TouchableOpacity>
+            <Text>{"\n"}</Text>
             <TouchableOpacity style={styles.selectButton} onPress={selectImage}>
-                <Text style={styles.buttonText}>Pick an image</Text>
+                <Text style={styles.buttonText}>เลือกรูปภาพ</Text>
             </TouchableOpacity>
             <View style={styles.imageContainer}>
             {image !== null ? (
@@ -231,11 +233,10 @@ export default function UploadScreen() {
                 </View>
             ) : (
                 <TouchableOpacity style={styles.uploadButton} onPress={uploadImage}>
-                    <Text style={styles.buttonText}>Upload image</Text>
+                    <Text style={styles.buttonText}>อัพโหลดรูปภาพ</Text>
                 </TouchableOpacity>
             )}
             </View>
         </SafeAreaView>
     );
 }
-//test1123
